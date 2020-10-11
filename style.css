@@ -6,7 +6,7 @@
 
 /* WIP: add more div and class names and move properties - display flex, flex direction, and align items */
 body {
-  background: #1a6a87 url('./img/jong-marshes-79mNMAvSORg-unsplash.jpg')
+  background: #396885 url('./img/jong-marshes-79mNMAvSORg-unsplash.jpg')
     no-repeat center center/cover;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -39,7 +39,6 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  /* outline: 1px solid hotpink; */
   position: absolute;
   top: 0;
   left: 0;
@@ -62,4 +61,33 @@ body {
   top: -10px;
   left: -10px;
   z-index: -2;
+}
+
+.pointer {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  outline: 1px solid hotpink;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
