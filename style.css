@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* WIP: add more div and class names and move properties - display flex, flex direction, and align items */
+body {
+  background: #1a6a87 url('./img/jong-marshes-79mNMAvSORg-unsplash.jpg')
+    no-repeat center center/cover;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+
+  /* might move this to different class */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circle Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* setting margin to auto to center everything */
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  /* setting the position to relative because the two circles, regular circle and gradient circle are going to be positioned absolute within the container so this needs to be relative */
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  /* outline: 1px solid hotpink; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #5584b7 0%,
+    #4c82a4 40%,
+    #fff 40%,
+    #fff 60%,
+    #333f6d 60%,
+    #2a355b 100%
+  );
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -2;
+}
